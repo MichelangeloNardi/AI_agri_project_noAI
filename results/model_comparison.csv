@@ -1,6 +1,14 @@
-,accuracy,f1,training_time
-Logistic Regression,0.82,0.82,0.5
-SVM (RBF),0.9198,0.9195,15.33
-Random Forest,0.9448,0.9447,0.88
-Simple NN,0.8558333333333333,0.8539734067295888,N/A
-CNN,0.9641666666666666,0.9641872581716184,N/A
+,Model,Accuracy,Macro F1,Training Approach
+1,Stacking_Ensemble,0.9992,0.9992,Stacking — LR meta-learner on proba features
+2,DL_Ensemble,0.9983,0.9983,Soft Voting — CNN + ResNet18 + EfficientNet
+3,Full_Ensemble,0.9983,0.9983,Soft Voting — all 5 models
+4,BestDL_RF_Ensemble,0.9983,0.9983,Soft Voting — best DL + RF
+5,ResNet18,0.9975,0.9975,Transfer Learning — ResNet18 fine-tuned
+6,EfficientNet,0.9967,0.9967,Transfer Learning — EfficientNet-B0 fine-tuned
+7,Hard_Vote_Ensemble,0.9717,0.9716,Hard Majority Voting — all 5 models
+8,CNN,0.9642,0.9642,Custom 3-block CNN — PyTorch (notebook 04)
+9,XGBoost,0.9392,0.9393,"XGBoost (n=500, lr=0.1) — classical ML"
+10,Random_Forest,0.9383,0.9384,Random Forest (n=100) — classical ML
+11,SVM_RBF,0.9225,0.9224,"Kernel SVM (RBF, C=10) — classical ML"
+12,Simple_NN,0.8558,0.854,Fully-connected NN (flattened input) — PyTorch (notebook 04)
+13,Logistic_Regression,0.8325,0.8313,Logistic Regression (L2 regularization) — classical ML

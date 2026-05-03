@@ -1,3 +1,5 @@
 data/
 data_preprocessed/
 *.pth
+results/
+saved_images/
